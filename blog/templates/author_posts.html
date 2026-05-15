@@ -1,0 +1,14 @@
+<h1>Posts by {{ author.name }}</h1>
+
+{% for post in posts %}
+    <div>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.published_date }}</p>
+    </div>
+    <hr>
+{% empty %}
+    <p>No posts yet.</p>
+{% endfor %}
+
+<br>
+<a href="{% url 'post_list' %}">← Back</a>

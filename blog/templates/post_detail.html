@@ -1,0 +1,11 @@
+<h1>{{ post.title }}</h1>
+
+<p><b>Author:</b> {{ post.author.name }}</p>
+<p><b>Date:</b> {{ post.published_date }}</p>
+
+<hr>
+
+<p>{{ post.content }}</p>
+
+<br>
+<a href="{% url 'post_list' %}">← Back</a>
